@@ -1,0 +1,32 @@
+.container {
+  //width: 600%;
+  height: 100vh;
+  //display: flex;
+  //flex-wrap: nowrap;
+
+  scroll-snap-type: x mandatory;
+  display: flex;
+  -webkit-overflow-scrolling: touch;
+  overflow-x: scroll;
+}
+
+.panel {
+  //will-change: transform;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  background-size: cover;
+
+  //padding: 1rem;
+  position: relative;
+  scroll-snap-align: start;
+  min-width: 100vw;
+  height: 100vh;
+  text-align: center;
+
+  .next-room {
+    position: absolute;
+    bottom: 1rem;
+    transform: translateY(200%);
+  }
+}

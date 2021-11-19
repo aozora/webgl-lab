@@ -1,0 +1,36 @@
+.button,
+button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 320px;
+  height: 64px;
+  padding: 1rem 2rem;
+  border: 0;
+  border-radius: 36px;
+  font-size: 2rem;
+  font-weight: 400;
+  color: var(--color-primary);
+  text-decoration: none;
+  background-color: var(--color-white);
+  transition: all .4s ease-in-out;
+  box-shadow: 0 24px 74px rgba(60, 0, 189, 0.2), inset 0 0 6px var(--color-primary);
+
+  &:hover {
+    background-color: var(--color-primary);
+    color: var(--color-white);
+  }
+}
+
+.start-button,
+.next-room {
+  position: absolute;
+  bottom: 2rem;
+  left: calc((100% - 300px) / 2);
+  transform-origin: center;
+}
+
+.no-sticky {
+  position: relative;
+}
+

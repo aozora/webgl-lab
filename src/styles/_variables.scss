@@ -1,0 +1,114 @@
+/** ****************************************************************
+
+    CSS Variables
+
+    Font rules are setup in base.scss for all major
+    elements using CSS variables.
+    When there's need to override a font rule, there's no need to
+    set again the rules, but it's best to just set a new value for
+    a CSS variable for a font rule.
+
+    **************************************************************** */
+
+:root {
+  // ################################################################
+  //  COLORS
+  // ################################################################
+  --color-primary: #827dff;
+  --color-white: #fff;
+  --color-black: #000;
+
+  /* Default body background */
+  --body-background: var(--color-black);
+
+  /* type modular scale */
+  // body font size
+  --text-base-size: 1rem; // 18px - html is set to 112.5%
+
+  // type scale
+  --text-base-scale-size: 1rem; // 18px, 1rem
+
+  /* max text sizes  */
+  --text-max-width: 38rem;
+
+  ///* focus state */
+  //--focus-outline: 1px dashed var(--token-color-basic-6);
+  //--focus-box-shadow: none;
+  //--focus-border-size: 1px;
+  //--focus-border-style: dashed;
+  //--focus-border-color: var(--token-color-basic-6);
+  //
+  ///* initial values */
+  //--text-weight: var(--token-font-weight-regular);
+  //
+  ///* spacing */
+  //--text-letter-spacing: normal;
+  //
+  ///* H1 variables */
+  //--heading-weight: var(--token-font-weight-regular);
+  //
+  ///* H1 variables */
+  //--h1-font-size-min: var(--text-scale-11);
+  //--h1-font-size-value: 2.7vw + 3.2rem;
+  //--h1-font-size-max: var(--text-scale-14);
+  //--h1-line-height: 1.2;
+  //--h1-letter-spacing: -0.5;
+  //
+  ///* H2 variables */
+  //--h2-font-size-min: var(--text-scale-9);
+  //--h2-font-size-value: 3.3vw + 1rem;
+  //--h2-font-size-max: var(--text-scale-14);
+  //--h2-line-height: 1.1;
+  //
+  ///* H3 variables */
+  //--h3-font-size-min: var(--text-scale-11);
+  //--h3-font-size-value: 0.5vw + 1.4rem;
+  //--h3-font-size-max: var(--text-scale-12);
+  //--h3-line-height: 1.2;
+  //
+  ///* subtitles */
+  //--subtitle-font-size-min: var(--text-base-size);
+  //--subtitle-font-size-max: var(--text-scale-6);
+
+  // ################################################################
+  //    TYPOGRAPHY SCALE & FONTS
+  // ################################################################
+  --baseline: 1.375;
+
+  //--body-font-weight: 400;
+  //--heading-font-weight: 400;
+  --kerning: normal; // auto (default), normal (enabled), none (disabled)
+  --body-font-color: var(--color-white);
+
+  // Fonts
+  //--variable-font-family: 'Hauora var', Helvetica, Roboto, Arial, sans-serif;
+  //--variable-heading-font-family: serif;
+  --body-font-family: ZombieNight, Helvetica, Roboto, Arial, sans-serif;
+  //--heading-font-family: 'AllRoundGothic', Helvetica, Roboto, Arial, sans-serif;
+
+  // ################################################################
+  //    SHADOWS
+  // ################################################################
+  --default-box-shadow: none;
+  --default-text-shadow: none;
+
+  // ################################################################
+  //    STATES
+  // ################################################################
+  --selection-color: var(--token-color-basic-1);
+  --selection-background-color: var(--token-color-basic-5);
+  --placeholder-color: var(--token-color-basic-6);
+
+  // ################################################################
+  //    SECTIONING
+  // ################################################################
+  --section-margin: 3rem;
+  --section-max-width: 1440px;
+
+  // ################################################################
+  //    GRID
+  // ################################################################
+  --grid-columns-mobile: 4;
+  --grid-columns-desktop: 12;
+  --grid-gap: 16px;
+}

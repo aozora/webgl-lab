@@ -1,0 +1,39 @@
+@mixin visuallyhidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  clip: rect(0 0 0 0);
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  overflow: hidden;
+}
+
+@mixin container {
+  max-width: var(--section-max-width);
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 16px;
+
+  @media (min-width: 48em) {
+    padding: 0 24px;
+  }
+
+  @media (min-width: 80em) {
+    padding: 0 48px;
+  }
+}
+
+@mixin container-layout-grid {
+  display: grid;
+  grid-template-columns: repeat(var(--grid-columns-mobile), 1fr);
+  grid-template-rows: auto;
+  grid-gap: var(--grid-gap);
+  gap: var(--grid-gap);
+  align-items: center;
+  width: 100%;
+
+  @media (min-width: 64em) {
+    grid-template-columns: repeat(var(--grid-columns-desktop), 1fr);
+  }
+}
