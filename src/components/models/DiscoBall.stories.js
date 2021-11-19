@@ -1,15 +1,15 @@
 import DiscoBall from './DiscoBall';
-import { Setup } from '../../stories/components/Setup';
 import { Vector3 } from 'three';
+import { SetupStage } from '../../stories/components/SetupStage';
 
 export default {
   title: 'Models/Disco Ball',
   component: DiscoBall,
   decorators: [
     Story => (
-      <Setup controls={false} cameraPosition={new Vector3(0, 0, 10)}>
+      <SetupStage controls={false} cameraPosition={new Vector3(0, 0, 10)}>
         <Story />
-      </Setup>
+      </SetupStage>
     )
   ]
 };

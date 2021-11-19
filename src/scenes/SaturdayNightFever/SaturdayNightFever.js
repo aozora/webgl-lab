@@ -13,27 +13,6 @@ const SaturdayNightFever = ({ soundOn = true }) => {
   const canvasRef = useRef();
   const cameraRef = useRef();
   const soundRef = useRef();
-  // eslint-disable-next-line
-  // const [audioIsPlaying, toggleAudio] = useStore(state => [state.audioIsPlaying, state.toggleAudio]);
-
-  // const { ref, inView } = useInView({
-  //   threshold: 0,
-  //   triggerOnce: true,
-  //   delay: 1000
-  // });
-  //
-  // useLayoutEffect(() => {
-  //   if (inView && soundRef?.current && cameraRef?.current) {
-  //     cameraRef.current.position.y = 5.1;
-  //     soundRef.current.play();
-  //   }
-  // }, [inView]);
-
-  // const toggleAudioStatus = useCallback(() => {
-  //   const isPlaying = soundRef.current.isPlaying;
-  //   isPlaying ? soundRef.current.stop() : soundRef.current.play();
-  //   toggleAudio(!isPlaying);
-  // }, [toggleAudio]);
 
   const Loading = () => {
     return <h2>Loading...</h2>;
