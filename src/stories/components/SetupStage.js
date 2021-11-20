@@ -33,6 +33,8 @@ export function SetupStage({
 
         </Stage>
 
+        <axesHelper args={[5]}/>
+
         {/*{gizmo &&*/}
         {/*<GizmoHelper*/}
         {/*  alignment='bottom-right' // widget alignment within scene*/}

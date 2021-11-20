@@ -10,7 +10,7 @@ export default {
       <SetupStage controls={true}
                   adjustCamera={false}
                   gizmo={true}
-                  cameraPosition={new Vector3(0, 2, 5)}>
+                  cameraPosition={new Vector3(0, 0, 5)}>
         <Story />
       </SetupStage>
     )
