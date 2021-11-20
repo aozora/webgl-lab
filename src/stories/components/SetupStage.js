@@ -1,14 +1,14 @@
 import React, { Suspense } from 'react';
 import * as THREE from 'three';
 import { Canvas } from '@react-three/fiber';
-import { OrbitControls } from '@react-three/drei';
-import { Stage } from '@react-three/drei';
+import { TrackballControls, Stage, GizmoHelper, GizmoViewport } from '@react-three/drei';
 
 export function SetupStage({
                              children,
                              cameraFov = 75,
                              cameraPosition = new THREE.Vector3(-5, 5, 5),
                              controls = true,
+                             gizmo = false,
                              environment = 'city',
                              ...restProps
                            }) {
@@ -33,7 +33,16 @@ export function SetupStage({
 
         </Stage>
 
-        {controls && <OrbitControls enablePan={true} enableZoom={true} enableRotate={true} />}
+        {/*{gizmo &&*/}
+        {/*<GizmoHelper*/}
+        {/*  alignment='bottom-right' // widget alignment within scene*/}
+        {/*  margin={[80, 80]} // widget margins (X, Y)*/}
+        {/*>*/}
+        {/*  <GizmoViewport axisColors={['red', 'green', 'blue']} labelColor='black' />*/}
+        {/*</GizmoHelper>*/}
+        {/*}*/}
+
+        {controls && <TrackballControls makeDefault enablePan={true} enableZoom={true} enableRotate={true} />}
       </Canvas>
     </Suspense>
   );

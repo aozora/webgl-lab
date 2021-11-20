@@ -1,6 +1,6 @@
 import { Suspense, useRef } from 'react';
 import { OrbitControls, Stage } from '@react-three/drei';
-import Earth from '../components/models/Earth';
+import EarthLowPoly from '../components/models/EarthLowPoly';
 
 export default function EarthPage() {
   const ref = useRef();
@@ -10,7 +10,7 @@ export default function EarthPage() {
       {/*<Canvas dpr={[1, 2]} camera={{ fov: 50 }}>*/}
       <Suspense fallback={null}>
         <Stage controls={ref} contactShadowBlur={6}>
-          <Earth />
+          <EarthLowPoly />
         </Stage>
       </Suspense>
       <OrbitControls ref={ref} autoRotate makeDefault />; // {/*</Canvas>*/}

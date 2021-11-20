@@ -28,7 +28,7 @@ export function Setup({
           </>
         )}
 
-        {controls && <OrbitControls />}
+        {controls && <OrbitControls makeDefault />}
       </Canvas>
     </Suspense>
   );
