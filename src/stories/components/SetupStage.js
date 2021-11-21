@@ -1,7 +1,8 @@
 import React, { Suspense } from 'react';
 import * as THREE from 'three';
 import { Canvas } from '@react-three/fiber';
-import { TrackballControls, Stage, GizmoHelper, GizmoViewport } from '@react-three/drei';
+import { TrackballControls, Stage } from '@react-three/drei';
+import SetupCamera from './SetupCamera';
 
 export function SetupStage({
                              children,
@@ -16,12 +17,13 @@ export function SetupStage({
     <Suspense fallback={null}>
       <Canvas
         shadows
-        camera={{ position: cameraPosition, fov: cameraFov }}
+        // camera={{ position: cameraPosition, fov: cameraFov }}
         dpr={window.devicePixelRatio}
         {...restProps}
       >
+
         <Stage
-          position={[0, -2.8, 0]}
+          position={[0, 0, 0]}
           contactShadow // Optional: creates a contactshadow underneath the content (default=true)
           shadows // Optional: lights cast shadow (default=true)
           adjustCamera={false} // Optional: zooms the content in (default=true)
@@ -30,19 +32,10 @@ export function SetupStage({
           preset='rembrandt' // Optional: rembrandt (default) | portrait | upfront | soft
         >
           {children}
-
         </Stage>
 
-        <axesHelper args={[5]}/>
-
-        {/*{gizmo &&*/}
-        {/*<GizmoHelper*/}
-        {/*  alignment='bottom-right' // widget alignment within scene*/}
-        {/*  margin={[80, 80]} // widget margins (X, Y)*/}
-        {/*>*/}
-        {/*  <GizmoViewport axisColors={['red', 'green', 'blue']} labelColor='black' />*/}
-        {/*</GizmoHelper>*/}
-        {/*}*/}
+        <axesHelper args={[5]} />
+        <SetupCamera cameraPosition={cameraPosition} cameraFov={cameraFov} />
 
         {controls && <TrackballControls makeDefault enablePan={true} enableZoom={true} enableRotate={true} />}
       </Canvas>

@@ -12,13 +12,6 @@ export default function MarcelloAnimated(props) {
   const [actionIndex, setActionIndex] = useState(0);
   const actionNames = useMemo(() => ['mixamo.com', 'GangnamStyle'], []);
 
-  // Idle, ArmStretching, HipHopDance
-  useEffect(() => {
-    if (actions) {
-      actions[actionNames[actionIndex]].play();
-    }
-  }, [actions, actionIndex, actionNames]);
-
   useEffect(() => {
     if (props.dance) {
       setActionIndex(1);
@@ -27,9 +20,9 @@ export default function MarcelloAnimated(props) {
   }, [props.dance, actions, actionIndex, actionNames]);
 
   return (
-    <group ref={group} {...props} dispose={null} scale={[2, 2, 2]}>
+    <group ref={group} {...props} dispose={null} scale={[1,1,1]}>
       <group
-        position={[0, -1.92, -0.04]}
+        // position={[0, -1.92, -0.04]}
       >
         <primitive object={nodes.mixamorigHips} />
         <skinnedMesh

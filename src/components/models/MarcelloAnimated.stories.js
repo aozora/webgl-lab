@@ -9,7 +9,6 @@ export default {
     Story => (
       <SetupStage controls={true}
                   adjustCamera={false}
-                  gizmo={true}
                   cameraPosition={new Vector3(0, 0, 5)}>
         <Story />
       </SetupStage>
@@ -17,6 +16,6 @@ export default {
   ]
 };
 
-export const Idle = () => <MarcelloAnimated />;
+export const Idle = () => <MarcelloAnimated position={[0, 0, 0]} />;
 
 export const DancingGangnam = () => <MarcelloAnimated dance={true} />;
