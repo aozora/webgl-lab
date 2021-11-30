@@ -12,3 +12,10 @@ records.json
 postcss.config.js
 next-sitemap.js
 design-tokens/*
+
+node_modules
+.DS_Store
+dist
+dist-ssr
+*.local
+.eslintcache
