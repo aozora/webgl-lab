@@ -1,6 +1,7 @@
 import MarcelloAnimated from './MarcelloAnimated';
 import { Vector3 } from 'three';
 import { SetupStage } from '../../stories/components/SetupStage';
+import { Meta } from '@storybook/react';
 
 export default {
   title: 'Models/Marcello Animated',
@@ -14,8 +15,8 @@ export default {
       </SetupStage>
     )
   ]
-};
+} as Meta;
 
-export const Idle = () => <MarcelloAnimated position={[0, 0, 0]} />;
+export const Idle = (): JSX.Element => <MarcelloAnimated position={[0, 0, 0]} />;
 
-export const DancingGangnam = () => <MarcelloAnimated dance={true} />;
+export const DancingGangnam = (): JSX.Element => <MarcelloAnimated dance={true} />;
