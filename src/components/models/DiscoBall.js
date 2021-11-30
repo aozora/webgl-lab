@@ -7,7 +7,7 @@ import { useGLTF, useAnimations } from '@react-three/drei';
 
 export default function DiscoBall(props) {
   const group = useRef();
-  const { nodes, materials, animations } = useGLTF('/glb/disco-ball.glb');
+  const { nodes, materials, animations } = useGLTF('/glb/disco-ball-draco-v1.glb');
   const { actions } = useAnimations(animations, group);
 
   useEffect(() => {
@@ -31,4 +31,4 @@ export default function DiscoBall(props) {
   );
 }
 
-useGLTF.preload('/glb/disco-ball.glb');
+useGLTF.preload('/glb/disco-ball-draco-v1.glb');

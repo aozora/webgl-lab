@@ -7,7 +7,7 @@ import { useGLTF, useAnimations } from '@react-three/drei';
 
 export default function Tati(props) {
   const group = useRef();
-  const { nodes, materials, animations } = useGLTF('/glb/maya-birmain-cat.glb');
+  const { nodes, materials, animations } = useGLTF('/glb/maya-birmain-cat-draco-v2-512.glb');
   const { actions } = useAnimations(animations, group);
 
   useEffect(() => {
@@ -53,4 +53,4 @@ export default function Tati(props) {
   );
 }
 
-useGLTF.preload('/glb/maya-birmain-cat.glb');
+useGLTF.preload('/glb/maya-birmain-cat-draco-v2-512.glb');

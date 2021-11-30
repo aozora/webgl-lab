@@ -6,7 +6,7 @@ import Jumbo from './models/Jumbo';
 import Birds from './models/Birds';
 import Tati from './models/Tati';
 import TheRiver from './models/TheRiver';
-import MarcelloIntro from './models/MarcelloIntro';
+import MarcelloAnimatedWaveHipHop from './models/MarcelloAnimatedWaveHipHop';
 
 const Intro = ({cameraRef})=>{
   return(
@@ -21,7 +21,7 @@ const Intro = ({cameraRef})=>{
         </group>
 
         <group position={[0, -62, 0]}>
-          <MarcelloIntro position={[1, 0.9, 8.2]} />
+          <MarcelloAnimatedWaveHipHop position={[1, 0.9, 8.2]} />
           <Tati position={[-1.47, -1.2, 8.72]} />
           {/*<LowPolyTrees position={[4, 0, -8]} />*/}
           <TheRiver position={[-1.12, -1.52, 3.78]} rotation={[0, -0.3, 0]} />
