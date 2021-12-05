@@ -4,12 +4,7 @@ module.exports = {
     es2021: true,
     node: true
   },
-  'extends': [
-    'eslint:recommended',
-    'plugin:@typescript-eslint/recommended',
-    'plugin:react-hooks/recommended',
-    'prettier'
-  ],
+  'extends': ["eslint:recommended", "plugin:@typescript-eslint/recommended", "plugin:react-hooks/recommended", "prettier", "plugin:storybook/recommended"],
   parser: '@typescript-eslint/parser',
   parserOptions: {
     'ecmaVersion': 12,
@@ -21,8 +16,6 @@ module.exports = {
     'no-useless-rename': 0,
     'react-hooks/rules-of-hooks': 'error',
     'react-hooks/exhaustive-deps': 'warn',
-    'max-len': [
-      'off'
-    ]
+    'max-len': ['off']
   }
 };
