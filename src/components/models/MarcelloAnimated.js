@@ -6,13 +6,15 @@ import { useGLTF, useAnimations } from '@react-three/drei';
 
 export default function MarcelloAnimated({ ...props }) {
   const group = useRef();
-  const { nodes, materials, animations } = useGLTF('/marcello-idle-gangnam-draco-v1.glb');
+  const { nodes, materials, animations } = useGLTF('/glb/marcello/marcello-idle-gangnam-draco-v1.glb');
   const { actions } = useAnimations(animations, group);
   const actionNames = useMemo(() => ['mixamo.com', 'GangnamStyle'], []);
 
   useEffect(() => {
     if (props.dance) {
       actions[actionNames[1]].play();
+    }else {
+      actions[actionNames[0]].play();
     }
   }, [props.dance, actions, actionNames]);
 
