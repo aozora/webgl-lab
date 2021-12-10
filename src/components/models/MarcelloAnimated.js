@@ -13,7 +13,7 @@ export default function MarcelloAnimated({ ...props }) {
   useEffect(() => {
     if (props.dance) {
       actions[actionNames[1]].play();
-    }else {
+    } else {
       actions[actionNames[0]].play();
     }
   }, [props.dance, actions, actionNames]);

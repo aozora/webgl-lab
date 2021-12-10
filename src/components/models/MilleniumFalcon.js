@@ -7,7 +7,7 @@ import { useGLTF } from '@react-three/drei';
 
 export default function MilleniumFalcon(props) {
   const group = useRef();
-  const { nodes, materials } = useGLTF('/glb/sci-fi/millenium-falcon-3.glb');
+  const { nodes, materials } = useGLTF('/glb/sci-fi/millenium-falcon-3-draco-512.glb');
   return (
     <group ref={group} {...props} dispose={null}>
       <group rotation={[-Math.PI / 2, 0, 0]}>
@@ -292,5 +292,5 @@ export default function MilleniumFalcon(props) {
   );
 }
 
-useGLTF.preload('/glb/sci-fi/millenium-falcon-3.glb');
+useGLTF.preload('/glb/sci-fi/millenium-falcon-3-draco-512.glb');
 

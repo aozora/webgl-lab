@@ -4,13 +4,11 @@ module.exports = {
     es2021: true,
     node: true
   },
-  'extends': ["eslint:recommended", "plugin:@typescript-eslint/recommended", "plugin:react-hooks/recommended", "prettier", "plugin:storybook/recommended"],
-  parser: '@typescript-eslint/parser',
+  'extends': ["eslint:recommended", "plugin:react-hooks/recommended", "prettier", "plugin:storybook/recommended"],
   parserOptions: {
     'ecmaVersion': 12,
     'sourceType': 'module'
   },
-  plugins: ['@typescript-eslint'],
   rules: {
     'no-debugger': 'warn',
     'no-useless-rename': 0,
